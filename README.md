@@ -1,119 +1,71 @@
-# Itqan Plus Vercel Website
+# Itqan Plus — Vercel-ready website
 
-A light-theme, vivid-orange static website for **Itqan Plus**. The site is ready for Vercel and does not require a backend for the current WhatsApp enquiry flow.
+This is a static, Vercel-ready website for **Itqan Plus**. The homepage is fully English and uses the supplied Itqan Plus logo and five supplied portfolio designs.
 
-## Pages
+## Homepage order
 
-- `index.html` — main agency website
-- `blog.html` — searchable blog index
-- `article.html?slug=...` — individual blog article template
-- `404.html` — fallback page
+1. Hero
+2. Packages & pricing
+3. Contact / WhatsApp enquiry form
+4. Services
+5. Portfolio
+6. Process
+7. Trust points
+8. Review layout
+9. Blog preview
+10. FAQ
+11. Final CTA and footer
 
-## Included sections
-
-The homepage follows the same broad section flow as the supplied Grow reference: hero, channel strip, connected-service overview, services/features, portfolio, agency/about, service comparison, outcomes/social proof style section, process, pricing, testimonials, article/case-study style content, FAQ, project CTA and footer.
+The layout intentionally keeps pricing and the enquiry form near the top of the page and uses tighter section spacing so the page does not feel empty.
 
 ## Change package prices
 
-Open `config.js` and edit the `price` value inside `packages`.
+Open `config.js` and edit only the values in `packages` and `individualServices`.
 
 Example:
 
 ```js
-{
-  name: "Social Media Growth",
-  price: 5000,
-  suffix: "/month"
-}
+price: 5000
 ```
 
-Change `5000` to any new BDT amount. The website updates automatically.
-
-## Change individual service prices
-
-In `config.js`, edit `individualServices`:
-
-```js
-{ name: "30–60 sec Reel Edit", price: "1,200 BDT", meta: "per video" }
-```
-
-## Add or replace portfolio work
-
-1. Put the new image inside `/assets/`.
-2. Open `config.js`.
-3. Add/edit an item in `portfolio`:
-
-```js
-{
-  title: "Campaign Name",
-  category: "Social Media Design",
-  image: "assets/your-image.webp",
-  alt: "Description of the design"
-}
-```
-
-Portfolio filters are created automatically from the categories.
-
-## Add a blog post
-
-Open `config.js` and add a new object inside `blogPosts`:
-
-```js
-{
-  slug: "your-article-slug",
-  category: "Social Media",
-  title: "Your Article Title",
-  excerpt: "Short introduction for the blog card.",
-  date: "2026-09-18",
-  readTime: "5 min read",
-  body: [
-    { type: "p", text: "Opening paragraph..." },
-    { type: "h2", text: "Section heading" },
-    { type: "p", text: "Section paragraph..." }
-  ]
-}
-```
-
-The post will automatically appear on the blog page. The newest items at the top of `blogPosts` also appear in the homepage Insights section.
-
-## Testimonials
-
-The included Bangladeshi names and quotes are visibly marked **Sample testimonial** for layout preview. Replace them with verified client feedback before publishing. In `config.js`, set `demo: false` for real verified testimonials if you do not want the sample label.
+Change `5000` to the new price. The pricing card and contact-form options are generated from the same configuration.
 
 ## WhatsApp and bKash
 
-Both currently use:
+Both are configured in `config.js`:
 
-- WhatsApp: `+880 1776-165161`
-- bKash: `01776165161`
+```js
+whatsapp: "8801776165161",
+bkash: "01776165161"
+```
 
-Edit them in `config.js` under `brand` if needed.
+The contact form does not store customer data on a server. It creates a pre-filled WhatsApp message and opens WhatsApp.
 
-## Contact form
+## Portfolio
 
-The form does not send data to a server. It creates a pre-filled message and opens WhatsApp to the Itqan Plus number.
+Portfolio images are in `/assets` and entries are controlled in `config.js` under `portfolio`.
+
+## Reviews
+
+The current Bangladeshi-name reviews are clearly marked as sample review layouts. Replace them with verified client feedback in `config.js` before presenting them as real testimonials. Set `demo: false` after replacing a sample with a real review.
+
+## Blog
+
+- `blog.html` — article listing and search
+- `article.html` — individual article page
+- `blog.js` — blog listing logic
+- `article.js` — article rendering logic
+
+Add new posts inside `blogPosts` in `config.js`.
 
 ## Deploy to Vercel
 
-### Option 1: GitHub
+1. Extract the ZIP.
+2. Upload **the files inside the folder** to the root of your GitHub repository. Do not upload the containing folder as another nested directory.
+3. Import the repository in Vercel.
+4. Framework Preset: `Other`.
+5. Keep Root Directory at the repository root.
+6. No build command is required.
+7. Deploy.
 
-1. Create a new GitHub repository.
-2. Upload all files from this folder to the repository root.
-3. In Vercel, choose **Add New Project** and import the repository.
-4. Framework preset: **Other**.
-5. No build command is required.
-6. Deploy.
-
-### Option 2: Vercel CLI
-
-From this folder:
-
-```bash
-npx vercel
-```
-
-Follow the prompts. No build step is needed.
-
-## Brand assets
-
-The supplied Itqan Plus logo is in `assets/itqan-plus-logo.png`. The five supplied design samples are optimized as WebP files in the same folder.
+`vercel.json` is already included.

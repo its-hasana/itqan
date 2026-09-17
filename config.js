@@ -10,48 +10,48 @@ window.ITQAN_CONFIG = {
 
   packages: [
     {
-      id: "social-growth",
-      category: "Social Media",
-      name: "Social Media Growth",
+      id: "package-a",
+      category: "Package A",
+      name: "Social Media Management",
       price: 5000,
-      suffix: "/month",
+      suffix: "/ month",
       featured: true,
-      description: "A complete monthly content and management package for brands that want a consistent presence.",
+      description: "A complete monthly package for brands that need regular content, stronger presentation and ongoing page management.",
       features: [
         "Monthly social media management",
         "20 custom graphic designs",
         "20 full-length post copies",
         "5 short promotional videos",
         "Facebook page setup",
-        "Branding setup and visual consistency",
-        "Monthly content planning"
+        "Branding and visual consistency"
       ],
-      addon: "With inbox management: 7,000 BDT/month total"
+      addon: "Add inbox management for BDT 2,000 — total BDT 7,000/month."
     },
     {
-      id: "social-essential",
-      category: "Social Media",
+      id: "package-b",
+      category: "Package B",
       name: "Social Media Essential",
       price: 3500,
-      suffix: "/month",
+      suffix: "/ month",
       featured: false,
-      description: "A focused monthly plan for small businesses that need a reliable social media presence.",
+      description: "A focused monthly package for small businesses that want a consistent and professional social media presence.",
       features: [
-        "Social media management",
+        "Monthly social media management",
         "15 graphic design posts",
-        "Full-length post/article copy",
+        "Full-length article-style post copy",
         "Facebook page setup",
-        "Basic visual brand formatting"
-      ]
+        "Basic brand formatting"
+      ],
+      addon: "A practical starting plan for regular social media activity."
     },
     {
-      id: "web-launch",
-      category: "Website",
-      name: "Business Web Launch",
+      id: "web-package",
+      category: "Web Package",
+      name: "Website + Branding Launch",
       price: 10000,
       suffix: " one-time",
       featured: false,
-      description: "A practical launch package combining website, brand essentials and starter content.",
+      description: "A launch bundle for businesses that need a website, basic branding and starter content in one project.",
       features: [
         "Website design",
         "Domain setup",
@@ -60,19 +60,20 @@ window.ITQAN_CONFIG = {
         "5 SEO articles",
         "Facebook page setup",
         "5 social media post designs"
-      ]
+      ],
+      addon: "One-time project charge based on the listed starter scope."
     }
   ],
 
   individualServices: [
-    { name: "30–60 sec Reel Edit", price: "1,200 BDT", meta: "per video" },
-    { name: "Full-length YouTube Edit", price: "500 BDT", meta: "per finished minute" },
-    { name: "Custom Ad Poster", price: "500 BDT", meta: "per poster" },
-    { name: "SEO Article", price: "500 BDT", meta: "per article" },
-    { name: "Logo Design", price: "From 1,500 BDT", meta: "starting price" },
-    { name: "Local SEO", price: "Custom Quote", meta: "scope and competition based" },
-    { name: "LinkedIn Management", price: "Custom Quote", meta: "profile, content and outreach" },
-    { name: "Paid Campaign Management", price: "Custom Quote", meta: "Meta, Google or LinkedIn" },
+    { name: "30–60 sec Reel Edit", price: "BDT 1,200", meta: "per reel" },
+    { name: "Full-length YouTube Edit", price: "BDT 500", meta: "per finished minute" },
+    { name: "Custom Ad / Poster Design", price: "BDT 500", meta: "per design" },
+    { name: "SEO Article Writing", price: "BDT 500", meta: "per article" },
+    { name: "Logo Design", price: "From BDT 1,500", meta: "starting price" },
+    { name: "Local SEO", price: "Custom Quote", meta: "scope based" },
+    { name: "LinkedIn Management", price: "Custom Quote", meta: "content + management" },
+    { name: "Paid Campaign Management", price: "Custom Quote", meta: "Meta / Google / LinkedIn" },
     { name: "Client Lead Generation", price: "Custom Quote", meta: "B2B or local lead systems" }
   ],
 
